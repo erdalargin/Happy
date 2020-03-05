@@ -1,0 +1,145 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-03-02T13:36:57.014Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3238739833,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Verify house members",
+        "description": "",
+        "id": ";verify-house-members",
+        "after": [
+          {
+            "result": {
+              "duration": 115071043,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2263693418,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Send a get request to /houses. Request includes : Header Accept with value application/json, Query param key with value {{apiKey}}",
+            "match": {
+              "location": "house.send_a_get_request_to_houses_Request_includes_Header_Accept_with_value_application_json_Query_param_key_with_value()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4680830,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Verify status code 200, content type application/json; charset\u003dutf-8",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                },
+                {
+                  "val": "-8",
+                  "offset": 66
+                }
+              ],
+              "location": "house.verify_status_code_content_type_application_json_charset_utf(int,int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 156815608,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Capture the id of the Gryffindor house",
+            "match": {
+              "location": "house.capture_the_id_of_the_Gryffindor_house()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 439755813,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Capture the ids of the all members of the Gryffindor house",
+            "match": {
+              "location": "house.capture_the_ids_of_the_all_members_of_the_Gryffindor_house()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 452315303,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Send a get request to /houses/:id. Request includes : Header Accept with value application/json,  Query param key with value {{apiKey}}, Path param id with value from step 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 172
+                }
+              ],
+              "location": "house.send_a_get_request_to_houses_id_Request_includes_Header_Accept_with_value_application_json_Query_param_key_with_value_Path_param_id_with_value_from_step(Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 473998886,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Verify that response contains the same member ids as the step 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 62
+                }
+              ],
+              "location": "house.verify_that_response_contains_the_same_member_ids_as_the_step(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/house.feature",
+    "tags": []
+  }
+]
